@@ -1,0 +1,235 @@
+body,html {    /*Style für den gesamten Body-Beriech*/
+height: 100%;/*setzt die Höhe des Body-Bereiches auf hundert Prozent, um den gesamten verfügbaren Platzt auszufüllen*/
+width:100%;/*setzt die Breite des Body-Bereiches auf hundert Prozent, um den gesamten verfügbaren Platzt auszufüllen*/
+margin:0;/* entfernt den AUßenabstand*/
+box-sizing: border-box;
+padding:0;
+}
+
+h1{ /* Style für Überschriften(h1)*/
+ font-size:80px; /*Schriftgröße*/
+  color: White;/*Schriftfarbe*/
+}
+.banner{
+   background-image: url("https://w0.peakpx.com/wallpaper/488/22/HD-wallpaper-moonlight-forest-night-stars-forest-woods-twilight-trees-sky-clouds-full-moon-night.jpg"); /*Bild für das banner*/
+  height:20%; /*Höhe des Banners in Relation zur Göße des Fensters*/
+  background-position: center; /*Position des Banners*/
+  background-size: cover; /* Größe wird son angepasst, dass der gesamte Bereich ausgefüllt wird*/
+  position: relative; /*Position wird festgelegt, ermöglicht den Text auf dem Banner*/ 
+}
+.banner-text{ /*Text auf dem Banner*/
+  position: absolute; /*Positon relativ zum Banner*/
+  top: 50%; /* prozentualer Abstand von oben*/
+  left:50%; /* prozentualer Abstand von links*/
+   transform: translate(-50%, -50%); /*zentriert das Element*/
+}
+
+/*Navigation*/
+.menu{
+  position: relative; /*festlegen der Position*/
+  display: inline-block; /*Element als Inline-Element, trotzdem Layout-EIgenschaften*/
+}
+
+.menubtn { /*Schaltfläche für die Navigation */
+  background-color:#424549; /*Hintergrundfarbe*/
+  border:none; /*verhindert einen Rahmen*/
+  text-align:right;
+}
+
+
+
+/* Inhalt des DropDown-Menus*/
+.menu-content {
+  display: none; /*versteckt den Inhalt des Menus*/
+  position: absolute; /*Position in Relation zum Container "Menu"*/
+  background-color: #424549; /*Farbe*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*Schatten*/
+  z-index: 1; /*ändert die "Stapelungsreihenfolge", sodass der Inhalt beim "Hovern"über der Schaltfläche vor dem übrigen Inhalt gerendert wird, der den z-index auto hat*/
+  width:100px;
+  left:0;
+}
+
+
+.menu-content a:hover {background-color: #696c70;}/*ändert die Hintergrundfarbe der Links, wenn darüber "gehovert" wird*/
+
+
+.menu:hover .menu-content { /*zeigt das Menu, wenn über der Schaltfläche "gehovert" wird*/
+  display: block;
+}
+
+.Galerie{ /*container für die Bilder der verschiedenen Eulenarten*/
+	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://gardenerspath.com/wp-content/uploads/2023/08/Types-of-Pines-FB.jpg");/*Hintergrundbild*/
+	background-size:contain; /*Hintergrund angepasst an die Größe des Fensters*/
+	background-repeat: repeat; /*Hintergrundbild wiederholt sich, um Fläche auszufüllen*/
+  width:100%; /*kompletter Hintergrund wird ausgefüllt*/
+  display: flex;/*Flex-Layout*/
+  flex-wrap: wrap;/*Elemente werden positioniert*/
+  justify-content: center;/* Elemente werden zentriert*/
+  top:-7px;/*Inhalt wird nach oben verschoben, um an die Navbar anzuschließen*/
+  position:relative; /*Position*/
+}
+.image {/* Style für die ELemente im Container Image*/
+ margin:30px; /*Außenabstand an allen Seiten 30px*/
+  width: 400px;/*Breite der Bilder:400px*/ 
+}
+.image img { /*Style für das Bild im COntainer "Image"(notwendig für den Rahmen*/
+  border: ridge 7px white;/*Art des Rahmens*/
+}
+.image:hover .bildtext { /*Hover-Effekt: Bildtext wird angezeigt*/
+  opacity: 1;
+}
+.bildtext {
+  position: relative;
+  bottom: 0;
+ background-color:black;
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  font-size: 40px;
+  padding-bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  bottom:58px;
+  left:7px;
+}
+
+.Navigation{
+	background-color:#424549;
+	height: 40px;
+}
+.Navigation a{
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float:right;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top:-253px;
+  height: 253px;
+  width: 100%;
+  opacity: 0;
+  transition: 1.0s ease;
+  transition-delay:1s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bildtext:hover .overlay {
+  opacity: 1;
+}
+
+.overlaytext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.infotext {
+  width: 100%; /* Breite auf 100% setzen */
+  color: black;
+  line-height: 24px;
+  font-family: "Times New Roman";
+  text-align: left;
+  font-size: 17px;
+}
+
+a{
+	color:black;
+}
+h6 {
+  font-size: 21px;
+  margin-left: 5px;
+  margin-bottom: -13px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+.left, .right {
+  flex: 1 1 25%; /* Grow and shrink with a basis of 25% */
+  max-width:25%;
+}
+.right{
+	margin-right:-65px;
+}
+
+.middle {
+  flex: 1 1 50%; /* Grow and shrink with a basis of 50% */
+  max-width:50%;
+  margin-bottom:-38px;
+  margin-top:-20px;
+}
+.column {
+  padding-top: 15px;
+  padding-left:10px;
+}
+
+.imagelayout {
+  height:calc(100%/5);
+  width:100%;
+  object-fit: cover;
+  margin:0px 10px;
+  padding:1px;
+}
+
+.spalte {
+  float: left;
+}
+
+.links {
+  width: 60%;
+}
+
+.rechts {
+  width: 40%;
+}
+
+.reihe{
+	.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.info{
+	margin-left:20px;
+	line-height:23px;
+	margin:50px;
+}
+
+.infoimg{
+	height:100%;
+	position:center;
+	background-size:cover;
+	padding-top:50px;
+}
+
+
+
+.verlinkung a {
+            text-decoration: none;
+            color: #007BFF; /* Standard-Linkfarbe */
+	        margin-left: 0; 
+			
+			
+        }
+
+.verlinkung a:hover {
+            text-decoration: underline;
+        }
