@@ -16,6 +16,7 @@ h1{ /* Style für Überschriften(h1)*/
   background-position: center; /*Position des Banners*/
   background-size: cover; /* Größe wird son angepasst, dass der gesamte Bereich ausgefüllt wird*/
   position: relative; /*Position wird festgelegt, ermöglicht den Text auf dem Banner*/ 
+  width:100%;
 }
 .banner-text{ /*Text auf dem Banner*/
   position: absolute; /*Positon relativ zum Banner*/
@@ -27,7 +28,7 @@ h1{ /* Style für Überschriften(h1)*/
 /*Navigation*/
 .menu{
   position: relative; /*festlegen der Position*/
-  display: inline-block; /*Element als Inline-Element, trotzdem Layout-EIgenschaften*/
+  display: inline-block; /*Element als Inline-Element, trotzdem Layout-Eigenschaften*/
 }
 
 .menubtn { /*Schaltfläche für die Navigation */
@@ -163,11 +164,9 @@ h6 {
 
 .left, .right {
   flex: 1 1 25%; /* Grow and shrink with a basis of 25% */
-  max-width:25%;
+  max-width:22%;
 }
-.right{
-	margin-right:-65px;
-}
+
 
 .middle {
   flex: 1 1 50%; /* Grow and shrink with a basis of 50% */
@@ -175,16 +174,16 @@ h6 {
   margin-bottom:-38px;
   margin-top:-20px;
 }
-.column {
-  padding-top: 15px;
-  padding-left:10px;
+.column{
+	padding-top:15px;
 }
 
 .imagelayout {
   height:calc(100%/5);
   width:100%;
   object-fit: cover;
-  margin:0px 10px;
+	padding-left:10px;
+	padding-right:5px;
   padding:1px;
 }
 
@@ -233,3 +232,18 @@ h6 {
 .verlinkung a:hover {
             text-decoration: underline;
         }
+		
+		
+		
+.video {
+  margin: 3000px;
+  top:45%
+  width: 100%;
+}
+
+
+.video .thumbnail {
+  border: 5px solid #fff;
+  width: 100%;
+  height: 100%;  
+}
