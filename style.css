@@ -368,16 +368,28 @@ a {
 }
 
 @media (max-width: 480px) {
-     .menu-content {
-        width: 100%; /* Dropdown-Menü nimmt volle Breite ein */
+      .menu-content {
+        width: 100%; /* Dropdown-Menü nimmt die volle Breite ein */
         left: 0; /* Position auf der linken Seite des Bildschirms */
         right: auto; /* Rechten Abstand entfernen */
         text-align: center; /* Text im Menü zentrieren */
+        z-index: 100; /* Z-Index erhöhen, falls erforderlich */
     }
 
     .menu-content a {
         display: block; /* Links im Dropdown-Menü als Blockelemente anzeigen */
         padding: 10px 0; /* Innenabstand der Links anpassen */
+        color: white; /* Textfarbe anpassen */
+        text-decoration: none; /* Unterstreichung entfernen */
     }
+
+    .menu-content a:hover {
+        background-color: #696c70; /* Hintergrundfarbe bei Hover */
+    }
+
+    .menu:hover .menu-content {
+        display: block; /* Dropdown-Menü anzeigen bei Hover */
+    }
+}
 
 }
