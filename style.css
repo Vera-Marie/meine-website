@@ -218,7 +218,7 @@ a {
 /* Layout für mittlere Spalte */
 .middle {
     flex: 1 1 50%; /* Flex-Eigenschaft: wachsen und schrumpfen mit Basis von 50% */
-    max-width: 50%; /* Maximale Breite von 50% */
+	max-width:50%;
 }
 
 /* Layout für Spalten */
@@ -335,10 +335,6 @@ a {
         height: 15%; /* Größeres Banner auf kleinen Bildschirmen */
     }
 
-    .Navigation a {
-        font-size: 14px; /* Kleinere Schriftgröße für Navigation */
-        padding: 10px 12px; /* Kleinere Padding für Navigation */
-    }
 
     .spalte {
         width: 100%; /* Spalten nehmen die volle Breite ein */
@@ -353,6 +349,7 @@ a {
 	}
 	.middle{
 		width:100%;
+		max-width:100%
 	}
 	.left,.right{
 		display:none;
@@ -371,11 +368,16 @@ a {
 }
 
 @media (max-width: 480px) {
-    .menu-content {
+     .menu-content {
         width: 100%; /* Dropdown-Menü nimmt volle Breite ein */
+        left: 0; /* Position auf der linken Seite des Bildschirms */
+        right: auto; /* Rechten Abstand entfernen */
+        text-align: center; /* Text im Menü zentrieren */
     }
 
-    .menubtn img {
-        width: 25px; /* Kleinere Menü-Button-Bildgröße */
+    .menu-content a {
+        display: block; /* Links im Dropdown-Menü als Blockelemente anzeigen */
+        padding: 10px 0; /* Innenabstand der Links anpassen */
     }
+
 }
