@@ -312,3 +312,57 @@ a {
 .qudsiya{
 	width:200px;
 }
+/* Media Queries für verschiedene Bildschirmgrößen */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px; /* Kleinere Schriftgröße für Überschrift */
+    }
+
+    .banner {
+        height: 15%; /* Größeres Banner auf kleinen Bildschirmen */
+    }
+
+    .Navigation a {
+        font-size: 14px; /* Kleinere Schriftgröße für Navigation */
+        padding: 10px 12px; /* Kleinere Padding für Navigation */
+    }
+
+    .spalte {
+        width: 100%; /* Spalten nehmen die volle Breite ein */
+        float: none; /* Float wird entfernt */
+    }
+
+    .links {
+        width: 100%; /* Volle Breite für linke Spalten */
+    }
+	.rechts{
+		width:none; /*ausblenden*/
+	}
+	.middle{
+		width:100%;
+	}
+	.left,.right{
+		width:none;
+	}
+    .video {
+        height: 200px; /* Kleinere Höhe für Videos */
+    }
+
+    .info {
+        margin: 20px; /* Kleinere Abstände */
+    }
+	.column{
+		width:100%;
+		float:none;
+	}
+}
+
+@media (max-width: 480px) {
+    .menu-content {
+        width: 100%; /* Dropdown-Menü nimmt volle Breite ein */
+    }
+
+    .menubtn img {
+        width: 25px; /* Kleinere Menü-Button-Bildgröße */
+    }
+}
