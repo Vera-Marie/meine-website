@@ -343,6 +343,7 @@ a {
 
     .links {
         width: 100%; /* Volle Breite für linke Spalten */
+		margin-bottom:150px;
     }
 	.rechts{
 		display:none; /*ausblenden*/
