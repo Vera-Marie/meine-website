@@ -370,12 +370,12 @@ a {
 
 @media (max-width: 480px) {
       .menu-content {
-        width: 100%; /* Dropdown-Menü nimmt die volle Breite ein */
+        width:100px; /* Dropdown-Menü nimmt die volle Breite ein */
         left: 0px; /* Position auf der linken Seite des Bildschirms */
-		
-        right: auto; /* Rechten Abstand entfernen */
         text-align: center; /* Text im Menü zentrieren */
         z-index: 100; /* Z-Index erhöhen, falls erforderlich */
+		right:auto;
+		text-align:center;
     }
 
     .menu-content a {
