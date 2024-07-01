@@ -9,6 +9,16 @@
 </head>
 
 <body class="ebody">
+<script>
+        // JavaScript, um das Scrollverhalten zu überwachen und die Klasse "scrolled" hinzuzufügen
+        document.addEventListener('scroll', function() {
+            if (window.scrollY > 100) { // Anpassen der Scrollposition, ab der der Effekt ausgelöst werden soll
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
 	<div class="content">
     <div class="banner">
         <div class="banner-text">

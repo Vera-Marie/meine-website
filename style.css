@@ -2,17 +2,21 @@
 body, html {
     /* Style für den gesamten Body-Bereich */
     height: 100%; /* setzt die Höhe des Body-Bereiches auf hundert Prozent, um den gesamten verfügbaren Platz auszufüllen */
-    width: 100%; /* setzt die Breite des Body-Bereiches auf hundert Prozent, um den gesamten verfügbaren Platz auszufüllen */
     margin: 0; /* entfernt den Außenabstand */
     box-sizing: border-box; /* berücksichtigt Padding und Border in der Gesamtbreite und -höhe */
     padding: 0; /* entfernt den Innenabstand */
 }
+/* Zum Scrollen nach unten */
+body.scrolled {
+    padding-top: 40px; /* Platz für die feste Navigation einfügen */
+}
+
 
 /* Klasse für Body */
 .ebody {
     display: flex; /* macht den Body zu einem Flex-Container */
     flex-direction: column; /* stellt sicher, dass der Body als Flex-Container agiert */
-    min-height: 125vh; /* stellt sicher, dass der Body mindestens die volle Höhe des Viewports einnimmt */
+    min-height: 100vh; /* stellt sicher, dass der Body mindestens die volle Höhe des Viewports einnimmt */
 }
 
 /* Hauptinhalt */
@@ -50,10 +54,17 @@ h6 {
 }
 
 /* Navigation */
+nav{
+	position: sticky; /* Position auf sticky setzen */
+    top: -1px; /* Höhe der Navbar berücksichtigen */
+    z-index: 1000; /* Z-Index erhöhen, um über anderen Inhalt zu schweben */
+}
 .Navigation {
     background-color: #424549; /* Hintergrundfarbe */
     height: 40px; /* Höhe der Navigation */
     position: relative; /* Position wird festgelegt */
+	position:sticky;
+	
 }
 
 .Navigation a {
@@ -298,6 +309,8 @@ a {
     width: 100%; /* Volle Breite des Viewports */
     padding-right: 50px; /* Abstand zum rechten Rand */
     box-sizing: border-box; /* Berücksichtigt Padding und Border in der Gesamtbreite */
+	 position: fixed; /* Position auf fixiert setzen */
+    bottom: 0; /* Am unteren Ende des Viewports positionieren */
 }
 
 /* Style für Impressum */
@@ -336,13 +349,13 @@ a {
         width: 100%; /* Volle Breite für linke Spalten */
     }
 	.rechts{
-		width:none; /*ausblenden*/
+		display:none; /*ausblenden*/
 	}
 	.middle{
 		width:100%;
 	}
 	.left,.right{
-		width:none;
+		display:none;
 	}
     .video {
         height: 200px; /* Kleinere Höhe für Videos */

@@ -8,12 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="ibody">
+<script>
+        // JavaScript, um das Scrollverhalten zu überwachen und die Klasse "scrolled" hinzuzufügen
+        document.addEventListener('scroll', function() {
+            if (window.scrollY > 100) { // Anpassen der Scrollposition, ab der der Effekt ausgelöst werden soll
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
     <div class="banner">
         <div class="banner-text">
             <h1>Eulen</h1>
         </div>
     </div>
+	<nav>
     <div class="Navigation">
         <div class="menu">
             <button class="menubtn"><img src="https://cdn.icon-icons.com/icons2/916/PNG/512/Menu_icon_icon-icons.com_71858.png" alt="Menu" width="35"> </button>
@@ -25,6 +36,7 @@
         </div>
 		<a class="ibtn" href="ibtn.html">i</a>
     </div>
+	</nav>
     <div class="row">
         <div class="column left">
             <img class="imagelayout" src="https://www.planet-wissen.de/natur/voegel/eulen/eulen-steinkauz-wurm-100~_v-gseapremiumxl.jpg" alt="Eule">
