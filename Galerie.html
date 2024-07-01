@@ -3,11 +3,22 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+	 <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>Eulenarten</title>
 </head>
 
 <body>
+<script>
+    document.addEventListener('play', function(e){  
+        var audios = document.getElementsByTagName('audio');  
+        for(var i = 0, len = audios.length; i < len;i++){  
+            if(audios[i] != e.target){  
+                audios[i].pause();  
+            }  
+        }  
+    }, true);
+</script>
     <div class="banner">
         <div class="banner-text">
             <h1>Galerie</h1>
@@ -23,7 +34,7 @@
                 <a href="Eulenschutz.html">Eulenschutz</a>
             </div>
         </div>
-        <a href="Impressum.html"></a>
+		<a class="ibtn" href="ibtn.html">i</a>
     </div>
 	</nav>
     <div class="Galerie">
@@ -100,6 +111,9 @@
             </div>
         </div>
     </div>
+	<footer class=" footer">
+	<a class="impresslink" href="Impressum.html">Impressum</a>
+	</footer>
 </body>
 
 </html>
@@ -109,13 +123,3 @@
 
 
 
-<script>
-    document.addEventListener('play', function(e){  
-        var audios = document.getElementsByTagName('audio');  
-        for(var i = 0, len = audios.length; i < len;i++){  
-            if(audios[i] != e.target){  
-                audios[i].pause();  
-            }  
-        }  
-    }, true);
-</script>

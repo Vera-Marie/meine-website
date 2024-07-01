@@ -1,0 +1,314 @@
+/* Style für den Body und HTML */
+body, html {
+    /* Style für den gesamten Body-Bereich */
+    height: 100%; /* setzt die Höhe des Body-Bereiches auf hundert Prozent, um den gesamten verfügbaren Platz auszufüllen */
+    width: 100%; /* setzt die Breite des Body-Bereiches auf hundert Prozent, um den gesamten verfügbaren Platz auszufüllen */
+    margin: 0; /* entfernt den Außenabstand */
+    box-sizing: border-box; /* berücksichtigt Padding und Border in der Gesamtbreite und -höhe */
+    padding: 0; /* entfernt den Innenabstand */
+}
+
+/* Klasse für Body */
+.ebody {
+    display: flex; /* macht den Body zu einem Flex-Container */
+    flex-direction: column; /* stellt sicher, dass der Body als Flex-Container agiert */
+    min-height: 125vh; /* stellt sicher, dass der Body mindestens die volle Höhe des Viewports einnimmt */
+}
+
+/* Hauptinhalt */
+.content {
+    flex: 1; /* lässt den Hauptinhalt den verfügbaren Platz einnehmen */
+}
+
+/* Überschriften */
+h1 {
+    font-size: 80px; /* Schriftgröße */
+    color: white; /* Schriftfarbe */
+}
+
+h6 {
+    font-size: 21px; /* Schriftgröße */
+    margin-left: 5px; /* linker Außenabstand */
+    margin-bottom: -13px; /* unterer Außenabstand */
+}
+
+/* Banner */
+.banner {
+    background-image: url("https://w0.peakpx.com/wallpaper/488/22/HD-wallpaper-moonlight-forest-night-stars-forest-woods-twilight-trees-sky-clouds-full-moon-night.jpg"); /* Bild für das Banner */
+    height: 20%; /* Höhe des Banners in Relation zur Größe des Fensters */
+    background-position: center; /* Position des Banners */
+    background-size: cover; /* Größe wird so angepasst, dass der gesamte Bereich ausgefüllt wird */
+    position: relative; /* Position wird festgelegt, ermöglicht den Text auf dem Banner */
+    width: 100%;
+}
+
+.banner-text {
+    position: absolute; /* Position relativ zum Banner */
+    top: 50%; /* prozentualer Abstand von oben */
+    left: 50%; /* prozentualer Abstand von links */
+    transform: translate(-50%, -50%); /* zentriert das Element */
+}
+
+/* Navigation */
+.Navigation {
+    background-color: #424549; /* Hintergrundfarbe */
+    height: 40px; /* Höhe der Navigation */
+    position: relative; /* Position wird festgelegt */
+}
+
+.Navigation a {
+    font-size: 16px; /* Schriftgröße */
+    color: white; /* Schriftfarbe */
+    text-align: center; /* Text zentrieren */
+    padding: 14px 16px; /* Innenabstand */
+    text-decoration: none; /* keine Unterstreichung */
+    float: right; /* rechtsbündig */
+}
+
+.menu {
+    position: relative; /* Position festlegen */
+    display: inline-block; /* Element als Inline-Element mit Layout-Eigenschaften */
+}
+
+.menubtn {
+    background-color: #424549; /* Hintergrundfarbe */
+    border: none; /* verhindert einen Rahmen */
+    text-align: right; /* Text rechtsbündig */
+}
+
+/* Inhalt des Dropdown-Menus */
+.menu-content {
+    display: none; /* versteckt den Inhalt des Menus */
+    position: absolute; /* Position in Relation zum Container "Menu" */
+    background-color: #424549; /* Hintergrundfarbe */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Schatten */
+    z-index: 1; /* ändert die "Stapelungsreihenfolge" */
+    width: 100px; /* Breite des Dropdown-Menus */
+    left: 0; /* linksbündig */
+}
+
+.menu-content a:hover {
+    background-color: #696c70; /* ändert die Hintergrundfarbe der Links, wenn darüber "gehovert" wird */
+}
+
+.menu:hover .menu-content {
+    display: block; /* zeigt das Menu, wenn über der Schaltfläche "gehovert" wird */
+}
+
+.ibtn {
+    position: absolute; /* absolute Position */
+    right: 0; /* rechtsbündig */
+    padding: 0; /* kein Innenabstand */
+    margin: 0; /* kein Außenabstand */
+    font-weight: bold; /* fetter Text */
+}
+
+.ibtn:hover {
+    color: lightgrey; /* Textfarbe bei Hover */
+}
+
+/* Style für die Seite: Galerie */
+.Galerie {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://gardenerspath.com/wp-content/uploads/2023/08/Types-of-Pines-FB.jpg"); /* Hintergrundbild */
+    background-size: contain; /* Hintergrund angepasst an die Größe des Fensters */
+    background-repeat: repeat; /* Hintergrundbild wiederholt sich, um Fläche auszufüllen */
+    width: 100%; /* kompletter Hintergrund wird ausgefüllt */
+    display: flex; /* Flex-Layout */
+    flex-wrap: wrap; /* Elemente werden positioniert */
+    justify-content: center; /* Elemente werden zentriert */
+    top: 0px; /* Inhalt wird nach oben verschoben, um an die Navbar anzuschließen */
+    position: relative; /* Position wird festgelegt */
+}
+
+.image {
+    margin: 30px; /* Außenabstand an allen Seiten 30px */
+    width: 400px; /* Breite der Bilder: 400px */
+}
+
+.image img {
+    border: ridge 7px white; /* Art des Rahmens */
+}
+
+.image:hover .bildtext {
+    opacity: 1; /* Hover-Effekt: Bildtext wird angezeigt */
+}
+
+.bildtext {
+    position: relative; /* relative Position */
+    bottom: 0; /* untenbündig */
+    background-color: black; /* Hintergrundfarbe */
+    color: #f1f1f1; /* Textfarbe */
+    width: 100%; /* volle Breite */
+    transition: .5s ease; /* Übergangseffekt */
+    opacity: 0; /* Text ist zunächst unsichtbar */
+    font-size: 40px; /* Schriftgröße */
+    padding-bottom: 0px; /* kein Innenabstand unten */
+    background: rgba(0, 0, 0, 0.5); /* halbtransparenter Hintergrund */
+    bottom: 58px; /* Abstand von unten */
+    left: 7px; /* Abstand von links */
+}
+
+.overlay {
+    position: absolute; /* absolute Position */
+    bottom: 0; /* untenbündig */
+    left: 0; /* linksbündig */
+    right: 0; /* rechtsbündig */
+    top: -253px; /* Abstand von oben */
+    height: 253px; /* Höhe des Overlays */
+    width: 100%; /* volle Breite */
+    opacity: 0; /* Overlay ist zunächst unsichtbar */
+    transition: 1.0s ease; /* Übergangseffekt */
+    transition-delay: 1s; /* Verzögerung des Übergangseffekts */
+    background-color: rgba(0, 0, 0, 0.5); /* halbtransparenter Hintergrund */
+}
+
+.bildtext:hover .overlay {
+    opacity: 1; /* Overlay wird bei Hover angezeigt */
+}
+
+.overlaytext {
+    color: white; /* Textfarbe */
+    font-size: 20px; /* Schriftgröße */
+    position: absolute; /* absolute Position */
+    top: 50%; /* prozentualer Abstand von oben */
+    left: 50%; /* prozentualer Abstand von links */
+    transform: translate(-50%, -50%); /* zentriert das Element */
+    text-align: center; /* Text zentriert */
+}
+
+/* Style für Site: Index */
+.infotext {
+    width: 100%; /* Breite auf 100% setzen */
+    color: black; /* Textfarbe auf Schwarz setzen */
+    line-height: 24px; /* Zeilenhöhe */
+    font-family: "Times New Roman"; /* Schriftart */
+    text-align: left; /* Text linksbündig */
+    font-size: 17px; /* Schriftgröße */
+}
+
+/* Links */
+a {
+    color: black; /* Linkfarbe auf Schwarz setzen */
+}
+
+/* Layout für Reihen */
+.row {
+    display: flex; /* Flex-Layout */
+    flex-wrap: wrap; /* Elemente umbrechen */
+    justify-content: space-between; /* Elemente mit Platz dazwischen verteilen */
+}
+
+/* Layout für linke und rechte Spalten */
+.left, .right {
+    flex: 1 1 25%; /* Flex-Eigenschaft: wachsen und schrumpfen mit Basis von 25% */
+    max-width: 22%; /* Maximale Breite von 22% */
+}
+
+/* Layout für mittlere Spalte */
+.middle {
+    flex: 1 1 50%; /* Flex-Eigenschaft: wachsen und schrumpfen mit Basis von 50% */
+    max-width: 50%; /* Maximale Breite von 50% */
+}
+
+/* Layout für Spalten */
+.column {
+    padding-top: 15px; /* Innenabstand oben */
+}
+
+/* Bildlayout */
+.imagelayout {
+    height: calc(100% / 5); /* Höhe relativ zur Gesamtgröße, verteilt auf fünf Teile */
+    width: 100%; /* Volle Breite */
+    object-fit: cover; /* Bild an Rahmen anpassen */
+    padding-left: 10px; /* Innenabstand links */
+    padding-right: 5px; /* Innenabstand rechts */
+    padding: 1px; /* Allgemeiner Innenabstand */
+}
+
+/* Style für Site: Eulenschutz */
+.spalte {
+    float: left; /* Element linksbündig anordnen */
+}
+
+/* Linke Spalte */
+.links {
+    width: 60%; /* Breite auf 60% setzen */
+}
+
+/* Rechte Spalte */
+.rechts {
+    width: 40%; /* Breite auf 40% setzen */
+}
+
+/* Informationsabschnitt */
+.info {
+    margin-left: 20px; /* Außenabstand links */
+    line-height: 23px; /* Zeilenhöhe */
+    margin: 50px; /* Außenabstand */
+}
+
+/* Links mit Verlinkungen */
+.verlinkung a {
+    text-decoration: none; /* Keine Unterstreichung */
+    color: #007BFF; /* Standard-Linkfarbe */
+    margin-left: 0; /* Kein linker Außenabstand */
+}
+
+.verlinkung a:hover {
+    text-decoration: underline; /* Unterstreichung bei Hover */
+}
+
+/* Video-Container */
+.video {
+    height: 300px; /* Höhe des Containers */
+    width: 100%; /* Volle Breite des Containers */
+    display: flex; /* Flex-Layout */
+    justify-content: center; /* Zentrierung horizontal */
+    align-items: center; /* Zentrierung vertikal */
+    border: 5px double black; /* Doppelter schwarzer Rahmen */
+}
+
+/* Video iframe */
+.video iframe {
+    width: 100%; /* Volle Breite des iframe */
+    height: 100%; /* Volle Höhe des iframe */
+}
+
+/* Video-Container */
+.vcon {
+    height: 100%; /* Volle Höhe des Containers */
+    width: 100%; /* Volle Breite des Containers */
+    display: flex; /* Flex-Layout */
+    justify-content: center; /* Zentrierung horizontal */
+    align-items: center; /* Zentrierung vertikal */
+    flex-direction: column; /* Flex-Richtung vertikal */
+    position: relative; /* Relative Positionierung */
+    top: 15px; /* Abstand von oben */
+}
+
+/* Footer */
+.footer {
+    background-color: #424549; /* Hintergrundfarbe */
+    color: white; /* Textfarbe auf Weiß setzen */
+    text-align: right; /* Text rechtsbündig */
+    height: 40px; /* Höhe des Footers */
+    line-height: 40px; /* Zeilenhöhe */
+    position: relative; /* Relative Positionierung */
+    bottom: 0; /* Am unteren Ende des Viewports positionieren */
+    width: 100%; /* Volle Breite des Viewports */
+    padding-right: 50px; /* Abstand zum rechten Rand */
+    box-sizing: border-box; /* Berücksichtigt Padding und Border in der Gesamtbreite */
+}
+
+/* Style für Impressum */
+.impresslink {
+    color: white; /* Linkfarbe auf Weiß setzen */
+}
+
+.impresslink:hover {
+    color: lightgrey; /* Textfarbe bei Hover auf Hellgrau setzen */
+}
+
+.qudsiya{
+	width:200px;
+}
